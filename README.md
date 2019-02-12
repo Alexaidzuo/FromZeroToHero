@@ -20,19 +20,19 @@
 
 # [Update design](https://github.com/Alexaidzuo/FromZeroToHero/commit/b3a952bc1ba959808f270d0977c66b22b9c31625)
 
-- Projekat prebacen u app folder
-- Kreirani gulp taskovi
--- Kompajler SASS u CSS
--- Minimizovanje CSS fajla
--- Browser sync
+* Projekat prebacen u app folder
+  * Kreirani gulp taskovi
+  * Kompajler SASS u CSS
+  * Minimizovanje CSS fajla
+  * Browser sync
 
-- Kreiran SASS 
-- Azuriran dizajn za sekcije:
--- Header
--- Projekat
--- Predavaci
--- O nama
--- Donatori i partneri
--- Footer
+* Kreiran SASS 
+* Azuriran dizajn za sekcije:
+  * Header
+  * Projekat
+  * Predavaci
+  * O nama
+  * Donatori i partneri
+  * Footer
 
 
