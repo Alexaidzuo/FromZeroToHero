@@ -259,6 +259,8 @@ section.predavaci
 	width: 100%
 	padding-bottom: 33.2px
 	text-align: center
+.fab
+	font-size: 45px
 
 /* ======== SECTION GALLERY ======== */
 .gallery
@@ -291,7 +293,7 @@ section.predavaci
 	font-size: 2em
 .donatori img
 	max-width: 100%
-	border: 1px solid rgba(220, 220, 220, 0.54);
+	border: 1px solid rgba(220, 220, 220, 0.54)
 	margin-bottom: 32.2px
 	padding: 20px
 
@@ -324,7 +326,7 @@ section.predavaci
 .footer-line
 	margin-top: 32.2px
 .info img
-	padding: 0 7px 0 7px;
+	padding: 0 7px 0 7px
 	height: 40px
 	margin-top: 32.2px
 	
@@ -347,6 +349,9 @@ section.predavaci
 		font-size: 3em
 	.burger, .close, .nav
 		display: none
+	/* ======== PREDAVACI ========== */
+	.fab
+		display: none
 
 @media only screen and (min-width: 360px)
 	h1
@@ -360,6 +365,12 @@ section.predavaci
 		width: 45%
 		height: 230px
 		margin: 0 2% 32.2px 2%
+	/* ======== PREDAVACI ========== */
+	.predavac
+		width: 46%
+		margin: 0 2%
+		min-height: 398.2px
+		float: left
 		
 
 @media only screen and (min-width: 992px)
@@ -401,6 +412,34 @@ section.predavaci
 		width: 33.33%
 		padding-bottom: 32.2px
 		float: left
+		margin: 0
+	.profile
+		position: relative
+	.overlay 
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		height: 170px
+		width: 170px
+		opacity: 0
+		transition: .3s ease
+		transition: all .2s ease-in-out
+		background: rgba(47, 47, 47, 0.72)
+		border-radius: 50%
+	.overlay:hover
+		opacity: 1
+		transition: all 0.3s ease-in-out
+	.fab
+		display: block
+		color: white
+		font-size: 45px
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		-ms-transform: translate(-50%, -50%)
+		text-align: center
 
 	/* ======== SECTION O NAMA ========== */
 	.organizacija
@@ -438,6 +477,7 @@ section.predavaci
 				width: 33.33333%
 				bottom: 0
 				background: #12576c
+
 
 /* ==========================================================================
  * Helper classes

@@ -253,6 +253,9 @@ section.predavaci {
   padding-bottom: 33.2px;
   text-align: center; }
 
+.fab {
+  font-size: 45px; }
+
 /* ======== SECTION GALLERY ======== */
 .gallery {
   text-align: center; }
@@ -346,6 +349,9 @@ section.predavaci {
   h1 {
     font-size: 3em; }
   .burger, .close, .nav {
+    display: none; }
+  /* ======== PREDAVACI ========== */
+  .fab {
     display: none; } }
 
 @media only screen and (min-width: 360px) {
@@ -359,7 +365,13 @@ section.predavaci {
   .donatori img {
     width: 45%;
     height: 230px;
-    margin: 0 2% 32.2px 2%; } }
+    margin: 0 2% 32.2px 2%; }
+  /* ======== PREDAVACI ========== */
+  .predavac {
+    width: 46%;
+    margin: 0 2%;
+    min-height: 398.2px;
+    float: left; } }
 
 @media only screen and (min-width: 992px) {
   .container {
@@ -394,7 +406,35 @@ section.predavaci {
   .predavac {
     width: 33.33%;
     padding-bottom: 32.2px;
-    float: left; }
+    float: left;
+    margin: 0; }
+  .profile {
+    position: relative; }
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 170px;
+    opacity: 0;
+    transition: .3s ease;
+    transition: all .2s ease-in-out;
+    background: rgba(47, 47, 47, 0.72);
+    border-radius: 50%; }
+  .overlay:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out; }
+  .fab {
+    display: block;
+    color: white;
+    font-size: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center; }
   /* ======== SECTION O NAMA ========== */
   .organizacija {
     width: 45%;
