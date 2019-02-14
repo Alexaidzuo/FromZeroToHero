@@ -1,5 +1,5 @@
 # Kurs My Career From Zero To Hero
-[*GitHub Pages*](https://alexaidzuo.github.io/FromZeroToHero/)
+[*GitHub Pages*](https://alexaidzuo.github.io/FromZeroToHero/app/)
 ---
 ### Photoshop dizajn
 - Dizajn PSD: [Google Drive](https://drive.google.com/open?id=1jXZ2yqQ2umJEDbQAo1D7RfoDMl3dVLdu)
@@ -17,5 +17,22 @@
 - Ubacene sve fotografije i ikonice u `.svg` formatu.
 - Kreiran `header` za `min-width:1024px`.
 - Kreiran globalni stil svih `button`-a, kao i `btn:hover` stil.
+
+# [Update design](https://github.com/Alexaidzuo/FromZeroToHero/commit/b3a952bc1ba959808f270d0977c66b22b9c31625)
+
+* Projekat prebacen u app folder
+  * Kreirani gulp taskovi
+  * Kompajler SASS u CSS
+  * Minimizovanje CSS fajla
+  * Browser sync
+
+* Kreiran SASS 
+* Azuriran dizajn za sekcije:
+  * Header
+  * Projekat
+  * Predavaci
+  * O nama
+  * Donatori i partneri
+  * Footer
 
 
