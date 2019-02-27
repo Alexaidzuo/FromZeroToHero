@@ -1,5 +1,4 @@
 /* Light Box for Gallery */
-
 $(function(){
     var $gallery = $('.gallery a').simpleLightbox();
   
@@ -63,3 +62,25 @@ jQuery(document).ready(function() {
         }
     });  
 });
+
+/* Hamburger Menu */
+$('.menu-toggle').click(function() {
+  $(this).toggleClass('open');
+  $('.unstyle-list').toggleClass('opening');
+  $('.nav').toggleClass('show');
+  if ($("nav").hasClass("show")) {
+    $('body').addClass('disable-scroll')
+  } else {
+    $('body').removeClass('disable-scroll')
+  }
+});
+
+$('ul li a').click(function() {
+  $('.menu-toggle').removeClass('open');
+  $('.unstyle-list').removeClass('opening');
+  $('.nav').removeClass('show');
+  $('body').removeClass('disable-scroll')
+});
+
+
+

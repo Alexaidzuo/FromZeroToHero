@@ -29,26 +29,20 @@
     <div class="header">
       <a href="index.html"><img src="img/logo.svg" class="logo" alt="My Career From Hero To Zero"></a>
       <nav class="nav">
+        <div class="menu-toggle">
+            <div class="hamburger"></div>
+        </div>
         <ul class="unstyle-list">
           <li><a href="/" class="active">Home</a></li>
-          <li><a href="">Program</a></li>
-          <li><a href="">O nama</a></li>
-          <li><a href="">Donatori i partneri</a></li>
-          <li><a href="">Kontakt</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#o-nama">O nama</a></li>
+          <li><a href="#donatori-i-partneri">Donatori i partneri</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
-        <button class="close">
-          <span></span>
-          <span></span>
-        </button>
       </nav>
-      <button class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
       <div class="container padding-top">
         <div class="hero">
-          <h1>My Career<br />
+          <h1>My Career1<br />
             <strong>FROM ZERO TO HERO</strong></h1>
           <p>Nudimo ti mogućnost da razviješ veštine <strong>veb dizajna</strong>, <strong>front-end
               programiranja</strong> i <strong>prenosive veštine</strong> uz pomoć stručnog tima. </p>
@@ -61,7 +55,7 @@
     </div>
   </header>
   <!-- Section Program -->
-  <section class="program">
+  <section class="program" id="program">
     <div class="container">
       <h2>Šta ćete naučiti?</h2>
       <p>Kurs uključuje <strong>razvoj osnovnih IT veština</strong> (web page razvoj i dizajn, HTML, CSS) i <strong>„prenosivih“
@@ -148,28 +142,31 @@
             <a href="https://www.linkedin.com/in/stefanrepac/" class="overlay"><i class="fab fa-linkedin social"></i></a>
           </div>
           <h3>Stefan Repac</h3>
-          <p>Full-stack Designer / Wordpress Developer at Purezeen</p>
+          <p>Full-stack Designer / Wrdpress Developer at Purezeen</p>
         </div>
       </div>
     </div>
   </section>
   <!-- Section Testimonials -->
-  <section class="testominals">
+  <section class="testimonials">
     <div class="container">
       <div class="arrow arrow-left">
-        <!-- Ikonica na levo -->
+        <i class="fal fa-long-arrow-left"></i>
       </div>
       <div class="profile">
         <img src="" alt="">
       </div>
-      <div class="profile-testimonial">
-        <h3>Aleksandar Ćirić</h3>
-        <p>Prezadovoljan sam sa konceptom obuke, predavačima i posvećenosti istih u rešavanju problema, nedoumica i
-          konkretnim objašnjenjima. Na samom početku su se postavili veoma profesionalno, druželjubivo, pa sam imao
-          razlog da se osećan zadovoljno i motivisano u daljem toku kursa. Naučio sam jako korisne stvari na samim
-          projektima, stekao samouverenost da zaista ono što želim mogu da uradim. Takođe bih pohvalio i predavače koji
-          su nam preneli socijalne veštine, veštine komunikacije i timskog rada. Zahvaljujući njima verujem da ću
-          uspeti da se ostvarim kao web dizajner i developer.</p>
+      <div class="profile-testimonial clearfix">
+        <div class="student">
+          <img src="img/testimonials/Aleksandar-Ciric.png" alt="Aleksandar Ciric">
+        </div>
+        <div class="student-testimonial">
+          <h3>Aleksandar Ćirić</h3>
+          <p>Prezadovoljan sam sa konceptom obuke, predavačima i posvećenosti istih u rešavanju problema, nedoumica i
+            konkretnim objašnjenjima. Naučio sam jako korisne stvari na samim projektima i rad na realnim projektima. Takođe bih pohvalio i predavače koji
+            su nam preneli socijalne veštine, veštine komunikacije i timskog rada. Zahvaljujući njima verujem da ću
+            uspeti da se ostvarim kao web dizajner i developer.</p>
+        </div>
       </div>
       <div class="arrow arrow-right">
         <!-- Ikonica na desno -->
@@ -225,9 +222,8 @@
     </div>
   </section>
   <!-- Section O nama-->
-  <section class="test">
-    <section class="o-nama">
-      <div class="container">
+    <section class="o-nama" >
+      <div class="container" id="o-nama">
         <h2>O nama</h2>
         <p>Obuku zajednički sprovode Centar za omladinski rad i DaFED u saradnji sa IT kompanijama.</p>
         <div class="clearfix">
@@ -250,10 +246,9 @@
         </div>
       </div>
     </section>
-  </section>
   <!-- Section Donatori i partneri -->
-  <section class="support">
-    <div class="container">
+  <section class="support clearfix">
+    <div class="container" id="donatori-i-partneri">
       <h2>Donatori i partneri</h2>
       <p>Obuku zajednički sprovode Centar za omladinski rad i DaFED u saradnji sa IT kompanijama MCI, Purezeen i Eton
         Digital, uz finansijsku podršku Švajcarske razvojne agencije i Tima za socijalno uključivanje i smanjenje
@@ -268,7 +263,7 @@
     </div>
   </section>
   <!-- Footer -->
-  <footer class="footer global">
+  <footer class="footer global" id="kontakt">
     <div class="container">
       <h2>Da li ste spremni za nove izazove?</h2>
       <a href=""><button class="btn">Prijavi se sa sledeću grupu polaznika</button></a>

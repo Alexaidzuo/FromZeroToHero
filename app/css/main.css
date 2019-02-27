@@ -102,12 +102,14 @@ p {
 a {
   text-decoration: none; }
 
+section {
+  padding-top: 50px; }
+
 .container {
   max-width: 1040px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
-  padding-top: 70px; }
+  margin: 0 auto; }
 
 .btn {
   font-size: 1.6em;
@@ -163,48 +165,45 @@ header {
   margin: 0 auto;
   position: relative; }
 
-nav {
+nav ul {
+  display: table-cell;
+  vertical-align: middle; }
+
+nav a {
+  color: #fff;
+  font-size: 3.6em;
+  line-height: 70px;
+  padding: 5px 10px; }
+  nav a:hover {
+    color: #e6a644; }
+
+.show {
   display: table;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #009ad0;
+  background: #0e2d43;
+  background: -moz-linear-gradient(left, #0e2d43 0%, #19aabc 100%);
+  background: -webkit-gradient(linear, left, right, color-stop(0%, #0e2d43), color-stop(100%, #19aabc));
+  background: -webkit-linear-gradient(left, #0e2d43 0%, #19aabc 100%);
+  background: -o-linear-gradient(left, #0e2d43 0%, #19aabc 100%);
+  background: -ms-linear-gradient(left, #0e2d43 0%, #19aabc 100%);
+  background: linear-gradient(to right, #0e2d43 0%, #19aabc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
   text-align: center;
   color: #000; }
-  nav ul {
-    display: table-cell;
-    vertical-align: middle; }
-  nav a {
-    color: #fff;
-    font-size: 3.6em;
-    line-height: 70px;
-    padding: 5px 10px; }
-
-.close {
-  width: 45px;
-  height: 45px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: block;
-  margin: 0; }
-  .close span {
-    width: 35px;
-    height: 2px;
-    background: white;
-    display: block;
-    transform: rotate(45deg); }
-    .close span:nth-child(2) {
-      transform: rotate(-45deg);
-      position: relative;
-      top: -2px; }
 
 .unstyle-list {
+  display: none;
   list-style-type: none;
-  font-size: 1.7em;
-  font-weight: 700; }
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0; }
+
+ul.unstyle-list.opening {
+  display: table-cell; }
 
 .container.padding-top {
   padding-top: 30px; }
@@ -228,7 +227,53 @@ nav {
   right: 80px;
   top: 80px; }
 
+/* ======== HAMBURGER MENU ======== */
+.menu-toggle {
+  position: absolute;
+  padding: 3em;
+  top: 1em;
+  right: .5em;
+  cursor: pointer; }
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 2.7em;
+  border-radius: 3px;
+  -webkit-transition: all ease-in-out 350ms;
+  transition: all ease-in-out 350ms; }
+
+.hamburger::before {
+  -webkit-transform: translateY(-7px);
+  transform: translateY(-7px); }
+
+.hamburger::after {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px); }
+
+.open .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+  .open .hamburger::before {
+    display: none; }
+  .open .hamburger::after {
+    -webkit-transform: translateY(0px) rotate(-90deg);
+    transform: translateY(0px) rotate(-90deg); }
+
+nav unstyle-list.opening {
+  display: block; }
+
+.disable-scroll {
+  overflow: hidden; }
+
 /* ======== SECTION PROGRAM ======== */
+section.program {
+  padding-bottom: 50px; }
+
 .program-icon img {
   max-width: 100px; }
 
@@ -249,7 +294,8 @@ section.predavaci {
   background: -o-linear-gradient(left, #0e2d43 0%, #19aabc 100%);
   background: -ms-linear-gradient(left, #0e2d43 0%, #19aabc 100%);
   background: linear-gradient(to right, #0e2d43 0%, #19aabc 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); }
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  padding-bottom: 50px; }
 
 .predavac {
   width: 100%;
@@ -258,6 +304,13 @@ section.predavaci {
 
 .fab {
   font-size: 45px; }
+
+/* ======== SECTION TESTIMONIALS ======== */
+.profile-testimonial {
+  position: relative;
+  background: #f6f9fc;
+  padding: 15px 15px 10px 15px;
+  border-radius: 15px; }
 
 /* ======== SECTION GALLERY ======== */
 .gallery {
@@ -297,7 +350,7 @@ section.predavaci {
 .dafed-logo {
   max-width: 135px; }
 
-/* ======== SECTION Donatori i partneri ======== */
+/* ======== SECTION DONATORI I PARTNERI ======== */
 .support p {
   font-size: 2em; }
 
@@ -333,7 +386,8 @@ section.predavaci {
     transform: skew(0, -12deg); }
 
 .footer.global > * {
-  position: relative; }
+  position: relative;
+  padding-top: 70px; }
 
 .footer-line {
   margin-top: 32.2px; }
@@ -580,10 +634,14 @@ section.predavaci {
     font-size: 1em; }
   h1 {
     font-size: 3em; }
-  .burger, .close, .nav {
-    display: none; }
-  /* ======== PREDAVACI ========== */
+  /* ======== SECTION PREDAVACI ========== */
+  section.program {
+    padding-top: 0px; }
+  /* ======== SECTION PREDAVACI ========== */
   .fab {
+    display: none; }
+  /* ======== SECTION TESTIMONIALS ========== */
+  .student {
     display: none; } }
 
 @media only screen and (min-width: 360px) {
@@ -610,8 +668,13 @@ section.predavaci {
     float: left; } }
 
 @media only screen and (min-width: 992px) {
-  section {
-    padding-bottom: 100px; }
+  html {
+    scroll-behavior: smooth; }
+  .hamburger {
+    display: none; }
+  .unstyle-list {
+    display: inline;
+    font-size: 1.7em; }
   /* ======== HEADER ========== */
   .hero {
     margin: 0; }
@@ -637,10 +700,14 @@ section.predavaci {
   .burger, .close {
     display: none; }
   /* ======== SECTION PROGRAM ========== */
+  section.program {
+    padding-top: 50px; }
   .program-icon {
     width: 33.3333%;
     float: left; }
   /* ======== SECTION PREDAVACI ========== */
+  section.predavaci {
+    margin-bottom: 100px; }
   .predavac {
     width: 33.33%;
     padding-bottom: 32.2px;
@@ -673,6 +740,22 @@ section.predavaci {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center; }
+  /* ======== SECTION TESTIMONIALS ========== */
+  section.testimonials {
+    padding-top: 150px; }
+  .student {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    float: left; }
+  .student-testimonial {
+    max-width: 100%;
+    float: right; }
+  .student-testimonial h3 {
+    margin: 2px;
+    text-align: center; }
+  .student-testimonial {
+    padding-left: 280px; }
   /* ======== SECTION GALLERY ========== */
   .no-padding {
     padding: 0; }
