@@ -272,7 +272,9 @@ ul.unstyle-list.opening
 nav unstyle-list.opening
 	display: block
 .disable-scroll
-	overflow: hidden
+	overflow: hidden !important
+	position: fixed
+	width: 100%
 
 /* ======== SECTION PROGRAM ======== */
 section.program
@@ -643,8 +645,6 @@ $add-vendor-prefixes: true !default
 		font-size: 1em
 	h1
 		font-size: 3em
-	// .burger, .close, .nav
-	// 	display: none
 	
 	/* ======== SECTION PREDAVACI ========== */
 	section.program

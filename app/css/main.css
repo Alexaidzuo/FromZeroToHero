@@ -268,7 +268,9 @@ nav unstyle-list.opening {
   display: block; }
 
 .disable-scroll {
-  overflow: hidden; }
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%; }
 
 /* ======== SECTION PROGRAM ======== */
 section.program {
