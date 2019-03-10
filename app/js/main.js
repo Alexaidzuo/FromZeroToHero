@@ -1,4 +1,4 @@
-/* Light Box for Gallery */
+/* LIGHTBOX FOR GALLERY */
 $(function(){
     var $gallery = $('.gallery a').simpleLightbox();
   
@@ -63,12 +63,12 @@ jQuery(document).ready(function() {
     });  
 });
 
-/* Hamburger Menu */
+/* HAMBURGER MENU */
 $('.menu-toggle').click(function() {
   $(this).toggleClass('open');
   $('.unstyle-list').toggleClass('opening');
-  $('.nav').toggleClass('show');
-  if ($("nav").hasClass("show")) {
+  $('.nav').toggleClass('navigation');
+  if ($("nav").hasClass("navigation")) {
     $('body').addClass('disable-scroll')
   } else {
     $('body').removeClass('disable-scroll')
@@ -76,11 +76,39 @@ $('.menu-toggle').click(function() {
 });
 
 $('ul li a').click(function() {
+  $('.nav').removeClass('navigation')
   $('.menu-toggle').removeClass('open');
   $('.unstyle-list').removeClass('opening');
-  $('.nav').removeClass('show');
   $('body').removeClass('disable-scroll')
 });
 
+/* TESTOMONIALS SLIDER */
 
-
+$('.testimonial-slider').slick({
+  autoplay: true,
+  speed: 300,
+  arrows: false,
+  dots: true,
+  pauseOnFocus: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+      }
+    }
+  ]
+});

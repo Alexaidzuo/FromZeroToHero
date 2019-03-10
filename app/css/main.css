@@ -177,7 +177,7 @@ nav a {
   nav a:hover {
     color: #e6a644; }
 
-.show {
+.navigation {
   display: table;
   position: fixed;
   top: 0;
@@ -285,7 +285,7 @@ section.program {
   padding-top: 33.2px;
   text-align: center; }
 
-/* ======== SECTION PREDAVACI ======== */
+/* ======== SECTION TEACHERS ======== */
 section.predavaci {
   color: #fff;
   width: 100%;
@@ -309,10 +309,116 @@ section.predavaci {
 
 /* ======== SECTION TESTIMONIALS ======== */
 .profile-testimonial {
-  position: relative;
-  background: #f6f9fc;
+  margin: 0px 10px;
   padding: 15px 15px 10px 15px;
-  border-radius: 15px; }
+  border-radius: 15px;
+  background: #f6f9fc; }
+
+.student-testimonial h3 {
+  margin: 2px;
+  text-align: center; }
+
+/* TESTIMONIAL SLIDER */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  outline: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none;
+      display-display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none; }
+  .slick-dots li {
+    margin: 0 0.25rem; }
+  .slick-dots button {
+    cursor: pointer;
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: rgba(0, 160, 179, 0.52);
+    text-indent: -9999px;
+    outline: none; }
+  .slick-dots li.slick-active button {
+    background-color: #00a0b3;
+    width: 0.75rem;
+    height: 0.75rem;
+    transform: 0.3s all ease-out; }
 
 /* ======== SECTION GALLERY ======== */
 .gallery {
@@ -325,7 +431,7 @@ section.predavaci {
   width: 100%;
   padding: 3px; }
 
-/* ======== SECTION O NAMA ======== */
+/* ======== SECTION ABOUT US ======== */
 .o-nama {
   text-align: center;
   background: #f6f9fc;
@@ -352,7 +458,7 @@ section.predavaci {
 .dafed-logo {
   max-width: 135px; }
 
-/* ======== SECTION DONATORI I PARTNERI ======== */
+/* ======== SECTION DONATORS AND PARTNERS ======== */
 .support p {
   font-size: 2em; }
 
@@ -628,6 +734,17 @@ section.predavaci {
  * ========================================================================== */
 @media only screen and (min-width: 320px) {
   /* ======== HEADER ========== */
+  #heros span {
+    height: 190px; }
+    #heros span:first-child {
+      width: 33.33333%;
+      top: 380px;
+      right: -10%;
+      background: #1cbbcf; }
+    #heros span:nth-child(2) {
+      width: 33.33333%;
+      bottom: 0;
+      background: #12576c; }
   .logo-kid {
     display: none; }
   .header {
@@ -636,10 +753,10 @@ section.predavaci {
     font-size: 1em; }
   h1 {
     font-size: 3em; }
-  /* ======== SECTION PREDAVACI ========== */
+  /* ======== SECTION TEACHERS ========== */
   section.program {
     padding-top: 0px; }
-  /* ======== SECTION PREDAVACI ========== */
+  /* ======== SECTION TEACHERS ========== */
   .fab {
     display: none; }
   /* ======== SECTION TESTIMONIALS ========== */
@@ -707,9 +824,7 @@ section.predavaci {
   .program-icon {
     width: 33.3333%;
     float: left; }
-  /* ======== SECTION PREDAVACI ========== */
-  section.predavaci {
-    margin-bottom: 100px; }
+  /* ======== SECTION TEACHERS ========== */
   .predavac {
     width: 33.33%;
     padding-bottom: 32.2px;
@@ -746,31 +861,24 @@ section.predavaci {
   section.testimonials {
     padding-top: 150px; }
   .student {
-    display: block;
-    position: absolute;
-    bottom: 0;
+    display: inline-block;
     float: left; }
   .student-testimonial {
     max-width: 100%;
     float: right; }
-  .student-testimonial h3 {
-    margin: 2px;
-    text-align: center; }
-  .student-testimonial {
-    padding-left: 280px; }
   /* ======== SECTION GALLERY ========== */
   .no-padding {
     padding: 0; }
   .gallery-box {
     width: 33.3333%; }
-  /* ======== SECTION O NAMA ========== */
+  /* ======== SECTION ABOUT US ========== */
   .organizacija {
     width: 45%;
     margin: 0 2.5%;
     float: left; }
   .czor-logo {
     padding: 28.9px 0; }
-  /* ======== SECTION Donatori i partneri ======== */
+  /* ======== SECTION DONATORS AND PARTNERS ======== */
   .donatori {
     text-align: center;
     margin: 32.2px; }
@@ -784,20 +892,7 @@ section.predavaci {
     float: left; } }
 
 @media only screen and (min-width: 1024px) {
-  /* ======== HEADER ========== */
-  #heros span {
-    height: 190px; }
-    #heros span:first-child {
-      width: 33.33333%;
-      top: 380px;
-      right: -10%;
-      background: #1cbbcf; }
-    #heros span:nth-child(2) {
-      width: 33.33333%;
-      bottom: 0;
-      background: #12576c; }
   /* ======== SECTION GALLERY ========== */
-  /* Hover Gallery images - testing */
   .gallery-box img:hover {
     opacity: 0.8;
     transition: all 0.3s ease-in-out; } }

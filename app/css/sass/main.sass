@@ -85,7 +85,6 @@ textarea
     background: linear-gradient(to right,   $left 0%, $right 100%)
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 )
 
-
 /* ==========================================================================
  * Author's custom styles
  * ==========================================================================
@@ -164,7 +163,7 @@ header
 	height: calc(190px * 4)
 
 #heros, #heros span 
-	position: absolute 
+	position: absolute
 
 #heros
 	width: 100%
@@ -192,7 +191,8 @@ nav
 		padding: 5px 10px
 		&:hover
 			color: #e6a644
-.show
+
+.navigation
 	display: table
 	position: fixed
 	top: 0
@@ -242,6 +242,7 @@ ul.unstyle-list.opening
 	top: 1em 
 	right: .5em 
 	cursor: pointer 
+
 .hamburger,
 .hamburger::before,
 .hamburger::after 
@@ -253,6 +254,7 @@ ul.unstyle-list.opening
 	border-radius: 3px 
 	-webkit-transition: all ease-in-out 350ms 
 	transition: all ease-in-out 350ms 
+
 .hamburger 
 	&::before 
 		-webkit-transform: translateY(-7px) 
@@ -260,6 +262,7 @@ ul.unstyle-list.opening
 	&::after 
 		-webkit-transform: translateY(4px) 
 		transform: translateY(4px) 
+
 .open
 	.hamburger 
 		-webkit-transform: rotate(45deg) 
@@ -269,8 +272,10 @@ ul.unstyle-list.opening
 		&::after 
 			-webkit-transform: translateY(0px) rotate(-90deg) 
 			transform: translateY(0px) rotate(-90deg) 
+
 nav unstyle-list.opening
 	display: block
+
 .disable-scroll
 	overflow: hidden !important
 	position: fixed
@@ -279,48 +284,172 @@ nav unstyle-list.opening
 /* ======== SECTION PROGRAM ======== */
 section.program
 	padding-bottom: 50px
+
 .program-icon img
 	max-width: 100px
+
 .program-icon
 	width: 100%
 	margin: 0 auto
 	padding-top: 33.2px
 	text-align: center
 
-/* ======== SECTION PREDAVACI ======== */
+/* ======== SECTION TEACHERS ======== */
 section.predavaci
 	color: #fff
 	width: 100%
 	@include linearGradient(#0e2d43, #19aabc)
 	padding-bottom: 50px
+
 .predavac
 	width: 100%
 	padding-bottom: 33.2px
 	text-align: center
+
 .fab
 	font-size: 45px
 
 /* ======== SECTION TESTIMONIALS ======== */
 .profile-testimonial
-	position: relative
-	background: #f6f9fc
+	margin: 0px 10px
 	padding: 15px 15px 10px 15px
 	border-radius: 15px
+	background: #f6f9fc
+
+.student-testimonial h3
+	margin: 2px
+	text-align: center
+
+/* TESTIMONIAL SLIDER */
+.slick-slider
+    position: relative
+    display: block
+    box-sizing: border-box
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    -ms-touch-action: pan-y
+    touch-action: pan-y
+    -webkit-tap-highlight-color: transparent
+
+.slick-list
+    position: relative
+    overflow: hidden
+    display: block
+    margin: 0
+    padding: 0
+
+    &:focus
+        outline: none
+
+    &.dragging 
+        cursor: pointer
+        cursor: hand
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0)
+    -o-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+.slick-track
+    position: relative
+    left: 0
+    top: 0
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+    &:before,
+    &:after
+        content: ""
+        display: table
+
+    &:after 
+        clear: both
+
+    .slick-loading &
+        visibility: hidden
+    
+.slick-slide
+	float: left
+	height: 100%
+	min-height: 1px
+	outline: none
+	[dir="rtl"] &
+		float: right
+	img 
+		display: block
+	&.slick-loading img
+		display: none
+    display: none
+	&.dragging img
+		pointer-events: none
+	.slick-initialized &
+		display: block
+	.slick-loading &
+		visibility: hidden
+	.slick-vertical &
+		display: block
+		height: auto
+		border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+	display: none
+
+.slick-dots
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 0
+	padding: 1rem 0
+	list-style-type: none
+	li
+		margin: 0 0.25rem
+
+	button
+		cursor: pointer
+		display: block
+		width: 0.5rem
+		height: 0.5rem
+		padding: 0
+		border: none
+		border-radius: 100%
+		background-color: rgba(0, 160, 179, 0.52)
+		text-indent: -9999px
+		outline: none
+
+	li.slick-active button
+		background-color: #00a0b3
+		width: 0.75rem
+		height: 0.75rem
+		transform: 0.3s all ease-out
+
 /* ======== SECTION GALLERY ======== */
 .gallery
 	text-align: center
+
 .btn.show-more 
 	margin: 50px 0px
+
 .gallery-box img
 	width: 100%
 	padding: 3px
-/* ======== SECTION O NAMA ======== */
+
+/* ======== SECTION ABOUT US ======== */
 .o-nama
 	text-align: center
 	background: #f6f9fc
 	padding-bottom: 70px
+
 .o-nama p
 	font-size: 2em
+
 .organizacija
 	padding-top: 32.2px
 	& h2
@@ -329,16 +458,20 @@ section.predavaci
 	& p
 		font-size: 1.8em
 		text-align: left
+
 .organizacija img
 	text-align: center
+
 .czor-logo
 	max-width: 399px
+
 .dafed-logo
 	max-width: 135px
 
-/* ======== SECTION DONATORI I PARTNERI ======== */
+/* ======== SECTION DONATORS AND PARTNERS ======== */
 .support p
 	font-size: 2em
+
 .donatori img
 	max-width: 100%
 	border: 1px solid rgba(220, 220, 220, 0.54)
@@ -354,6 +487,7 @@ section.predavaci
 	background: #f6f9fc
 	position: relative
 	padding-bottom: 64.4px
+
 .footer.global
 	background: transparent
 	overflow: hidden
@@ -372,8 +506,10 @@ section.predavaci
 .footer.global > * 
 	position: relative
 	padding-top: 70px
+
 .footer-line
 	margin-top: 32.2px
+
 .info img
 	padding: 0 7px 0 7px
 	height: 40px
@@ -637,20 +773,35 @@ $add-vendor-prefixes: true !default
 
 @media only screen and (min-width: 320px)
 	/* ======== HEADER ========== */
+	#heros 
+		span
+			height: 190px
+			&:first-child
+				width: 33.33333%
+				top: 380px
+				right: -10%
+				background: #1cbbcf
+			&:nth-child(2)
+				width: 33.33333%
+				bottom: 0
+				background: #12576c
+
 	.logo-kid
 		display: none
+
 	.header
 		padding: 15px
 		position: relative
 		font-size: 1em
+
 	h1
 		font-size: 3em
 	
-	/* ======== SECTION PREDAVACI ========== */
+	/* ======== SECTION TEACHERS ========== */
 	section.program
 		padding-top: 0px
 
-	/* ======== SECTION PREDAVACI ========== */
+	/* ======== SECTION TEACHERS ========== */
 	.fab
 		display: none
 	
@@ -686,8 +837,10 @@ $add-vendor-prefixes: true !default
 @media only screen and (min-width: 992px)
 	html
 		scroll-behavior: smooth
+
 	.hamburger
 		display: none
+
 	.unstyle-list
 		display: inline
 		font-size: 1.7em
@@ -695,8 +848,10 @@ $add-vendor-prefixes: true !default
 	/* ======== HEADER ========== */
 	.hero
 		margin: 0
+
 	.logo-kid
 		display: block
+
 	.nav
 		display: block
 		position: initial
@@ -704,39 +859,45 @@ $add-vendor-prefixes: true !default
 		height: auto
 		background: inherit
 		float: right
+
 	.nav 
 		li 
         float: left
+
 	.nav 
 		a
         color: #fff
         margin-left: 20px
+
 	.nav 
 		a
         font-size: 1.2em
         font-weight: 400
+
 	.container.padding-top
 		padding-top: 100px
+
 	.burger, .close
 		display: none
 
 	/* ======== SECTION PROGRAM ========== */
 	section.program
 		padding-top: 50px
+
 	.program-icon
 		width: 33.3333%
 		float: left
 	
-	/* ======== SECTION PREDAVACI ========== */
-	section.predavaci
-		margin-bottom: 100px
+	/* ======== SECTION TEACHERS ========== */
 	.predavac
 		width: 33.33%
 		padding-bottom: 32.2px
 		float: left
 		margin: 0
+
 	.profile
 		position: relative
+
 	.overlay 
 		position: absolute
 		top: 50%
@@ -749,9 +910,11 @@ $add-vendor-prefixes: true !default
 		transition: all .2s ease-in-out
 		background: rgba(47, 47, 47, 0.72)
 		border-radius: 50%
+
 	.overlay:hover
 		opacity: 1
 		transition: all 0.3s ease-in-out
+
 	.fab
 		display: block
 		color: white
@@ -766,38 +929,36 @@ $add-vendor-prefixes: true !default
 	/* ======== SECTION TESTIMONIALS ========== */
 	section.testimonials
 		padding-top: 150px
+
 	.student
-		display: block
-		position: absolute
-		bottom: 0
+		display: inline-block
 		float: left
+
 	.student-testimonial
 		max-width: 100%
 		float: right
-	.student-testimonial h3
-		margin: 2px
-		text-align: center
-	.student-testimonial
-		padding-left: 280px
-		
+
 	/* ======== SECTION GALLERY ========== */
 	.no-padding
 		padding: 0
+
 	.gallery-box
 		width: 33.3333%
 
-	/* ======== SECTION O NAMA ========== */
+	/* ======== SECTION ABOUT US ========== */
 	.organizacija
 		width: 45%
 		margin: 0 2.5%
 		float: left
+
 	.czor-logo
 		padding: 28.9px 0
 	
-	/* ======== SECTION Donatori i partneri ======== */
+	/* ======== SECTION DONATORS AND PARTNERS ======== */
 	.donatori
 		text-align: center
 		margin: 32.2px
+
 	.support img
 		&:nth-child(4), &:nth-child(5), &:nth-child(6)
 			width: 33.33%
@@ -810,22 +971,7 @@ $add-vendor-prefixes: true !default
 		float: left
 
 @media only screen and (min-width: 1024px)
-	/* ======== HEADER ========== */
-	#heros 
-		span
-			height: 190px
-			&:first-child
-				width: 33.33333%
-				top: 380px
-				right: -10%
-				background: #1cbbcf
-			&:nth-child(2)
-				width: 33.33333%
-				bottom: 0
-				background: #12576c
-
 	/* ======== SECTION GALLERY ========== */
-	/* Hover Gallery images - testing */
 	.gallery-box img:hover
 		opacity: 0.8
 		transition: all 0.3s ease-in-out
